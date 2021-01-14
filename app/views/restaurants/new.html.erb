@@ -1,0 +1,15 @@
+<h1>Creating a new restaurant</h1>
+
+<%= form_for(@restaurant, html: {class: "form-group"}) do |f| %>
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name, class: "form-control" %>
+
+    <%= f.label :address, "Address" %>
+    <%= f.text_field :address, class: "form-control" %>
+
+    <%= f.label :category, "category" %>
+    <%= f.select :category, @states, class: "form-control" %>
+
+    <%= f.submit "Save" %>
+<% end %>
+  

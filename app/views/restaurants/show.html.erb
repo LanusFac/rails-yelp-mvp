@@ -1,0 +1,24 @@
+<h1><%= @restaurant.name %></h1>
+
+<ul class="list-group list-group-flush">
+  <li class="list-group-item"><strong>Address: </strong><%= @restaurant.address %></li>
+  <li class="list-group-item"><strong>Phone number: </strong><%= @restaurant.phone_number %></li>
+  <li class="list-group-item"><strong>Category food: </strong><%= @restaurant.category %></li>
+</ul>
+<br>
+<br>
+<h2>Reviews</h2>
+<ul class="list-group list-group-flush">
+  <% @reviews.each do |review| %>
+    <li class="list-group-item">
+    <div class="d-flex justify-content-between">
+      <p><%= review.content %></p>
+      <p><strong> <%= review.rating %> </strong></p>
+    </div>
+    </li>
+  <% end %>
+</ul>
+
+
+
+<%= link_to "New review" , new_review_path, class: 'btn btn-secondary mt-3' %>

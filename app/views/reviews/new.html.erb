@@ -1,0 +1,12 @@
+<h1>Holis</h1>
+
+<%= form_for(@review, html: {class: "form-group"}) do |f| %>
+    <%= f.label :rating, "rating" %>
+    <%= f.text_field :rating, class: "form-control" %>
+
+    <%= f.label :content, "content" %>
+    <%= f.text_field :content, class: "form-control" %>
+
+    <%= f.submit "Submit", class: "mt-3" %>
+<% end %>
+  
